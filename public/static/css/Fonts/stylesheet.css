@@ -1,0 +1,59 @@
+@font-face {
+    font-family: '7_segmental_digital_displayRg';
+    src: url('7sdd-webfont.woff2') format('woff2'),
+         url('7sdd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'orthotopesregular';
+    src: url('orthotopes_oblique-webfont.woff2') format('woff2'),
+         url('orthotopes_oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'threefourtwotworegular';
+    src: url('threefourtwotwo-webfont.woff2') format('woff2'),
+         url('threefourtwotwo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rawrregular';
+    src: url('rawr-webfont.woff2') format('woff2'),
+         url('rawr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheKingOfFighters';
+    src: url('TheKingOfFighters.eot?#iefix') format('embedded-opentype'),  url('TheKingOfFighters.woff') format('woff'), url('TheKingOfFighters.ttf')  format('truetype'), url('TheKingOfFighters.svg#TheKingOfFighters') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:"Crash";
+    src:url("CRASH___.woff2") format("woff2"),url("CRASH___.woff") format("woff"),url("CRASH___.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Conman Regular";
+    src:url("ConmanRegular.woff2") format("woff2"),url("ConmanRegular.woff") format("woff"),url("ConmanRegular.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family: 'c39hrp24dhttnormal';
+    src: url('c39hrp24dhtt-webfont.woff2') format('woff2'),
+         url('c39hrp24dhtt-webfont.woff') format('woff'),
+         url('c39hrp24dhtt.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'xxii_ultimate-blacfallenangel';
+    src: url('xxii_ultimate-black-metal-webfont.woff2') format('woff2'),
+         url('xxii_ultimate-black-metal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
