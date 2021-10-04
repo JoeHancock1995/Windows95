@@ -1,6 +1,6 @@
-.main-container{
+/* .main-container{
   width: 100%;
-}
+} */
 
 /* 
 
@@ -28,7 +28,7 @@ body{
 }
 .nav{
   background-color: silver;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   bottom: 0;
   width: 100%;
