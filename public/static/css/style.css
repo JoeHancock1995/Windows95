@@ -1,62 +1,217 @@
-/* .main-container{
-  width: 100%;
-} */
-
-/* 
-
-.webgl-content * {border: 0; margin: 0; padding: 0; background-color: black; color: white;}
-.webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
-
-.webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
-.webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
-.webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
-.webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
-.webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
-
-.webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
-.webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
-.webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
-
-.webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
-.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
-.webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
-.webgl-content .footer .title {margin-right: 10px; float: right;} 
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;} */
-
-body{
-  background-color:#118d8d;
+* {
+  box-sizing: border-box;
 }
-.nav{
-  background-color: silver;
-  /* overflow: hidden; */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #008080;
+  color: #000;
+  font-family: "MS Sans Serif", Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+#app {
+  min-height: calc(100vh - 44px);
+  padding: 14px;
+}
+
+.desktop {
+  display: grid;
+  grid-template-columns: 120px minmax(280px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 88px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 4px;
+}
+
+.desktop-icon:hover,
+.desktop-icon:focus-visible {
+  outline: 1px dotted #fff;
+  background: rgba(0, 0, 128, 0.45);
+}
+
+.desktop-icon__glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  color: #111;
+}
+
+.desktop-icon__label {
+  line-height: 1.1;
+  text-shadow: 1px 1px #000;
+}
+
+.window {
+  max-width: 620px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  background: #c0c0c0;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.window__titlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.window__controls {
+  display: flex;
+  gap: 4px;
+}
+
+.window__control {
+  width: 18px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  background: #c0c0c0;
+  color: #000;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.window__body {
+  background: #fff;
+  margin: 10px;
+  padding: 12px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.window__body p {
+  margin: 0 0 8px;
+}
+
+.window__body ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.nav {
+  background: #c0c0c0;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  border: 2 outset; margin-left: 0%;
+  border-top: 2px solid #fff;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
 }
 
-/* Style the links inside the navigation bar */
-.nav a {
-  float: left;
+.dropup {
+  position: relative;
+}
+
+.dropbtn {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+  background: #c0c0c0;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+
+.dropbtn:active {
+  border-top: 2px solid #444;
+  border-left: 2px solid #444;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  min-width: 220px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+  padding: 6px;
+}
+
+.dropup-content a {
   display: block;
-  color: black;
-  text-align: center;
-  border: 2px outset;
+  color: #000;
   text-decoration: none;
-  font-size: 17px;
- 
-  padding-left: 10px ;
-  padding-right: 10px;
+  padding: 6px 8px;
 }
 
-/* Change the color of links on hover */
-.nav a:hover {
-  background-color: rgb(83, 83, 83);
-  color: black;
+.dropup-content a:hover,
+.dropup-content a:focus-visible {
+  background: #000080;
+  color: #fff;
 }
 
-/* Add a color to the active/current link */
-.nav a.active {
-  background-color: silver;
-  color: black;
+.dropup:hover .dropup-content,
+.dropup:focus-within .dropup-content {
+  display: block;
+}
+
+.taskbar-label {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 4px 10px;
+  background: #bcbcbc;
+}
+
+@media (max-width: 760px) {
+  .desktop {
+    grid-template-columns: 1fr;
+  }
+
+  .desktop-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

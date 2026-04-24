@@ -3,29 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>WINDOWS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WINDOWS 95 WEB</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    <!-- <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/DATA_GALLERY.json", {onProgress: UnityProgress});
-    </script> --> -->
   </head>
-  
+
   <body>
-    <nav class="nav">
-      <div class="dropup">
-        <button class="dropbtn">Start</button>
-          <div class="dropup-content">
-            <a href="/" class="nav__link" data-link> Home</a>
-            <a href="/artgallery" class="nav__link" data-link> Art Gallery</a>
-            <a href="/webdev" class="nav__link" data-link> Web Development</a>
-            <a href="/other" class="nav__link" data-link> Other</a>
-          </div>
-      </div>
-    </nav> 
     <div id="app"></div>
+
+    <nav class="nav" aria-label="Taskbar">
+      <div class="dropup">
+        <button class="dropbtn" type="button">Start</button>
+        <div class="dropup-content">
+          <a href="/" class="nav__link" data-link>🏠 Home</a>
+          <a href="/artgallery" class="nav__link" data-link>🖼️ Art Gallery</a>
+          <a href="/webdev" class="nav__link" data-link>💾 Web Development</a>
+          <a href="/other" class="nav__link" data-link>📁 Other</a>
+        </div>
+      </div>
+      <div class="taskbar-label">Desktop</div>
+    </nav>
+
     <script type="module" src="./static/js/index.js"></script>
   </body>
 </html>
